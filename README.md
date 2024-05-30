@@ -14,10 +14,10 @@ Follow these steps to set up the Kubernetes cluster, configure AWS ECR, and set 
 
 # 1. Kubernetes cluster configuration:
 The following commands should be used 
-"
-minikube start
-kubectl apply -f cluster.yaml
-"
+
+- minikube start
+- kubectl apply -f cluster.yaml
+
 
 # 2. Build and Push Docker Image to ECR
 Steps to be followed:
@@ -46,9 +46,9 @@ docker push <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/my-app:lat
 Configure GitHub Actions with your AWS credentials.
 Commit and push the publish.yaml file to the repository:
 " 
-git add pipeline.yaml
-git commit -m "Add CI/CD pipeline configuration
-git push origin main
+- git add pipeline.yaml
+- git commit -m "Add CI/CD pipeline configuration
+- git push origin main
 "
 
 **All the four process are created and configured**
