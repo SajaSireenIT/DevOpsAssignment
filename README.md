@@ -1,5 +1,5 @@
 "# DevOpsAssignment" 
-# Kubernetes Setup
+
 This repository contains files and instructions to set up a Kubernetes cluster using Minikube, configure AWS ECR, and set up a CI/CD pipeline for continuous deployment.
 # Prerequisites
 The following should be installed in your system to beign with.
