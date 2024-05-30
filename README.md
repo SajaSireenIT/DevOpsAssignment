@@ -31,24 +31,30 @@ You pushed a docker image on AWS ECR.
 
 **Required commands:**
 * Build Docker image:
+  
 " docker build -t my-app . "
 
 * Tag the Docker image:
+  
 " docker tag my-app:latest <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/my-app:latest "
 
 * Push Docker image to ECR:
+  
 " aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com
 docker push <your-aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/my-app:latest "
 
 # 3. Apply Ingress Configuration
+
 " kubectl apply -f ingress.yaml "
 # 4. Set Up CI/CD Pipeline
+
 Configure GitHub Actions with your AWS credentials.
 Commit and push the publish.yaml file to the repository:
-" 
+
+
 - git add pipeline.yaml
 - git commit -m "Add CI/CD pipeline configuration
 - git push origin main
-"
+
 
 **All the four process are created and configured**
